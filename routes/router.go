@@ -2,8 +2,9 @@ package routes
 
 import (
 	"net/http"
-	"user/controller"
-	"user/controller/auth"
+
+	"github.com/assyatier21/user-deall-technical-test/controller"
+	"github.com/assyatier21/user-deall-technical-test/controller/auth"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

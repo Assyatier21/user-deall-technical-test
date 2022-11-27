@@ -1,4 +1,4 @@
-module user
+module github.com/assyatier21/user-deall-technical-test
 
 go 1.19
 
