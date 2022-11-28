@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strconv"
 	"time"
+
 	"github.com/assyatier21/user-deall-technical-test/config"
 	"github.com/assyatier21/user-deall-technical-test/database"
 	e "github.com/assyatier21/user-deall-technical-test/entity"
@@ -20,7 +21,6 @@ var (
 	article e.Article
 	user    e.User
 	query   string
-	data    []interface{}
 )
 
 func InsertArticle(c echo.Context) (err error) {
@@ -29,6 +29,7 @@ func InsertArticle(c echo.Context) (err error) {
 		title      string
 		content    string
 		created_by int
+		data       []interface{}
 	)
 	currentTime := time.Now()
 	c.Bind(&article)
@@ -86,6 +87,7 @@ func InsertArticle(c echo.Context) (err error) {
 	}
 }
 func GetArticleByID(c echo.Context) (err error) {
+	var data []interface{}
 	id, err := strconv.Atoi(c.FormValue("id"))
 	if err != nil {
 		res := models.SetResponse(http.StatusBadRequest, "article id must be an integer", []interface{}{})
