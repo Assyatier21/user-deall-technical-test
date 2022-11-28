@@ -1,11 +1,11 @@
 package auth
 
 import (
-	"admin/config"
-	"admin/database"
-	e "admin/entity"
-	"admin/models"
-	"admin/utils"
+	"github.com/assyatier21/user-deall-technical-test/config"
+	"github.com/assyatier21/user-deall-technical-test/database"
+	e "github.com/assyatier21/user-deall-technical-test/entity"
+	"github.com/assyatier21/user-deall-technical-test/models"
+	"github.com/assyatier21/user-deall-technical-test/utils"
 	"database/sql"
 	"fmt"
 	"log"

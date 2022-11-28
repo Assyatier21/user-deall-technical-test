@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-deall
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: user-deall
+  template:
+    metadata:
+      labels:
+        app: user-deall
+    spec:
+      containers:
+        - name: user-deall
+          image: user-deall
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8800
+          livenessProbe:
+            tcpSocket:
+              port: 8800
+            initialDelaySeconds: 5
+            periodSeconds: 15
+            timeoutSeconds: 5
+          readinessProbe:
+            tcpSocket:
+              port: 8800
+            initialDelaySeconds: 5
+            timeoutSeconds: 1

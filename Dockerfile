@@ -1,13 +1,13 @@
-FROM golang:alpine
+FROM golang:1.19
 
-RUN apk update && apk add --no-cache git
+RUN mkdir /app
+
+ADD . /app
 
 WORKDIR /app
 
-COPY . .
+RUN go build -o /app_bin ./cmd/main.go
 
-RUN go mod tidy
+EXPOSE 8800
 
-RUN go build -o binary
-
-CMD ["./cmd/main"]
+CMD ["/app_bin"]

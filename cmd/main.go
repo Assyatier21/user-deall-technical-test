@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"user/config"
-	cons "user/models"
-	"user/routes"
+	"github.com/assyatier21/user-deall-technical-test/config"
+	cons "github.com/assyatier21/user-deall-technical-test/models"
+	"github.com/assyatier21/user-deall-technical-test/routes"
 )
 
 func main() {

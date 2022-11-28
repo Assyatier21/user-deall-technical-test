@@ -1,9 +1,9 @@
 package models
 
-import "user/entity"
+import "github.com/assyatier21/user-deall-technical-test/entity"
 
 const (
-	Addres      = "127.0.0.1"
+	Addres      = "0.0.0.0"
 	Port        = "8800"
 	AccessToken = "access-token"
 )

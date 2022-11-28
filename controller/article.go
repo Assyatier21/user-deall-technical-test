@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"strconv"
 	"time"
-	"user/config"
-	"user/database"
-	e "user/entity"
-	"user/models"
-	"user/utils"
+	"github.com/assyatier21/user-deall-technical-test/config"
+	"github.com/assyatier21/user-deall-technical-test/database"
+	e "github.com/assyatier21/user-deall-technical-test/entity"
+	"github.com/assyatier21/user-deall-technical-test/models"
+	"github.com/assyatier21/user-deall-technical-test/utils"
 
 	"github.com/labstack/echo/v4"
 )
